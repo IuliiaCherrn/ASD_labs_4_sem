@@ -99,30 +99,3 @@ def Kruskal_alg(arr):
     return  end_arr
 
   
-def Prim_alg(arr):
-    available = []
-    end_arr = []
-
-    available.append(int(0))
-    for i in range(1,len(arr)):
-        s_min = 1000000
-        s_j = 0
-        s_A = 0
-        for A in available:
-            for j in range(len(arr[A])):
-                if int(arr[A][j]) != 0:
-                    if j not in available and int(arr[A][j])<s_min:
-                        s_j = j
-                        s_A = int(A)
-                        s_min = int(arr[A][j])
-        available.append(s_j)
-        end_arr.append([s_A,s_j,s_min])
-
-
-
-    print(end_arr)
-
-
-
-print('Минимальное оставное дерево: ',Kruskal_alg(After_read(Over_read())))
-Prim_alg(Over_read())
