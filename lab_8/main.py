@@ -62,3 +62,4 @@ def alg_Deikstr(n,arr):
                     if end_arr[i] > int(arr[con_i][i])+end_arr[con_i]:
                         end_arr[i] = int(arr[con_i][i])+end_arr[con_i]
     return end_arr
+print(alg_Deikstr(len(Over_read())-1,Over_read())
